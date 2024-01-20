@@ -44,27 +44,6 @@ public class Events
         }
     }
     
-    //método calculatePopularity onde usamos a fórmula de cálculo dada no enunciado do projeto
-    public void calculatePopularity(){        
-        /*
-         * if(popularidadeMedia <= 0.25){
-            this.popularity = "Fraca";
-            }
-        
-        if(popularidadeMedia <= 0.5 && popularidadeMedia > 0.25){
-            this.popularity = "Nova";
-        }
-        
-        if(popularidadeMedia <= 0.75 && popularidadeMedia > 0.5){
-            this.popularity = "Grande";
-        }
-        
-        if(popularidadeMedia <= 1 && popularidadeMedia > 0.75){
-            this.popularity = "Topo";
-        }
-         */
-    }
-    
     //foi criado um método estático double que têm como parâmetros 2 arrays de int que no fimnos retorna um valor em double
     //os parâmetros são o número de participantes em cada palestra e o número da capaciade total das salas
     private static double calculatePopularity(int[] participantes, int[] totalCapacity) {
@@ -108,7 +87,7 @@ public class Events
         } 
         //se a popularidade for menor ou igual a 100%,e maior que 75 designa-se de topo
         else {
-            return "De topo";
+            return "Topo";
         }
     }
 }

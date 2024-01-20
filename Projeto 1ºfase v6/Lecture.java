@@ -119,7 +119,7 @@ public class Lecture
     }
     
     //método boolen para verificar se uma palestra afere as condições necessárias para ser simulada
-    public boolean canBeenSimulated() {
+    public boolean canBeSimulated() {
         
         //se tiver sala e palestrantes, então o método retorna verdade
         if(classroom != null && !lecturers.isEmpty()){

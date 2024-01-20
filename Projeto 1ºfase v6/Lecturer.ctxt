@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Lecturer
+comment1.params=
+comment1.target=Lecturer()
+comment2.params=name
+comment2.target=Lecturer(java.lang.String)
+comment3.params=lecture
+comment3.target=void\ addLecture(Lecture)
+comment4.params=
+comment4.target=void\ calculatePopularity()
+comment5.params=participantes\ totalCapacity
+comment5.target=double\ calculatePopularity(int[],\ int[])
+comment6.params=
+comment6.target=void\ listInformation()
+numComments=7

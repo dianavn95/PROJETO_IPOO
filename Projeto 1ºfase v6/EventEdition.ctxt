@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=EventEdition
+comment1.params=numberOfEdition\ initialDate\ endDate\ location
+comment1.target=EventEdition(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ EventEdition\r\n
+comment2.params=lecture
+comment2.target=void\ registerLecture(Lecture)
+comment3.params=
+comment3.target=boolean\ hasBeenSimulated()
+comment3.text=public\ List<Lecture>\ getIntersectingLectures(Lecture\ lecture)\ {\r\n\ \ \ \ \ \ \ \ //colocar\ s\u00F3\ com\ coment\u00E1rio\ pra\ n\ tar\ sempre\ a\ dar\ erro\r\n}
+comment4.params=
+comment4.target=void\ printInformation()
+comment5.params=
+comment5.target=void\ simulateRegistrations()
+numComments=6

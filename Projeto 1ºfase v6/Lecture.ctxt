@@ -1,0 +1,30 @@
+#BlueJ class context
+comment0.target=Lecture
+comment1.params=title\ startTime\ initialDate\ endDate\ classroom\ totalRegistrations
+comment1.target=Lecture(java.lang.String,\ java.time.LocalDateTime,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment10.params=
+comment10.target=int\ classroomCapacity()
+comment11.params=lecturer
+comment11.target=int\ getLecturerPopularity(Lecturer)
+comment12.params=clasroom
+comment12.target=int\ getClassroomCapacity(java.lang.String)
+comment13.params=
+comment13.target=java.lang.String\ getTitle()
+comment2.params=lecturer
+comment2.target=void\ addLecturer(Lecturer)
+comment3.params=lecturer
+comment3.target=boolean\ isLecturerRegistered(java.lang.String)
+comment3.text=\r\n\ Novos\ m\u00E9todos\ para\ ver\u00EDficar\ conflitos\ nas\ palestras\r\n\ \r\n\ private\ boolean\ isDateValid(LocalDateTime\ startDate,\ LocalDateTime\ endDate,\ LocalDateTime\ editionStart,\ LocalDateTime\ editionEnd){\r\n\ \ \ \r\n\ \ \ if(startDate\ >\=\ editionStart\ &&\ endDate\ <\=\ editionEnd){\r\n\ \ \ \ \ \ return\ true\ \r\n\ \ \ }\r\n\ \ \ else\ {\r\n\ \ \ \ \ \ \ return\ false\r\n\ \ \ }\r\n\ \ \ \r\n\ }\r\n
+comment4.params=
+comment4.target=void\ listDetails()
+comment5.params=
+comment5.target=boolean\ hasBeenSimulated()
+comment6.params=
+comment6.target=boolean\ canBeenSimulated()
+comment7.params=eventPopularity
+comment7.target=void\ simulateRegistrations(int)
+comment8.params=
+comment8.target=int\ calculateMaxLecturerPopularity()
+comment9.params=eventPopularity
+comment9.target=int\ calculateBaseParticipation(int)
+numComments=14

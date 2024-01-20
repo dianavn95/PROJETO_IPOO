@@ -41,6 +41,12 @@ public class Lecture
         this.totalRegistrations = -1;
     }
     
+    public LocalDateTime getStartTime(){
+        return startTime;
+    }
+    public LocalDateTime getEndTime(){
+        return endTime;
+    }
     
     //método para adicionar uma palestrante, fazendo uso do método add que a classe ArrayList já possui
     public void addLecturer(Lecturer lecturer) {

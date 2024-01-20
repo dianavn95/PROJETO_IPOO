@@ -80,7 +80,7 @@ public class Lecture
     
     //método boolean para verificar se um palestrante está inscrito, com parâmetro
     //o parâmetro é o palestrante
-    private boolean isLecturerRegistered(String lecturer){
+    private boolean isLecturerRegistered(Lecturer lecturer){
         
         //se a lista de arrays contêm o palestrante, retorna verdade
         if(lecturers.contains(lecturer)){

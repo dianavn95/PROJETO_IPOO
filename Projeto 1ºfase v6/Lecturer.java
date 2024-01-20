@@ -17,7 +17,7 @@ public class Lecturer
     private Double popularity;
     
     //construtor da classe Lecturer
-    public Lecturer()
+    public Lecturer(String name)
     {
         
         //inicialização dos atríbutos
@@ -29,25 +29,11 @@ public class Lecturer
         
     }
     
-    //método Lecturer com o parâmetro nome
-    public Lecturer(String name)
-    {
-        this.name = name;
-        this.lectures = new ArrayList<>();
-        this.popularity = null;
-        
-    }
-    
     //método addLecture com parâmetro Lecture para adicionar novas palestras
     public void addLecture(Lecture lecture) {
         
         //faz-se uso do método add já incluído na classe ArrayList
         lectures.add(lecture);
-    }
-    
-    //método para cálcular a popularidade do palestrante
-    public void calculatePopularity() {
-         
     }
     
     //método estático double para auxiliar no cálculo da popularidade do palestrante

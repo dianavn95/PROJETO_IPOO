@@ -12,7 +12,7 @@ public class Events
 {
     //3 atributos iniciais de nome (string), lista de edições (array list) e popularidade (string).
     private String name;
-    private ArrayList<EventEdition> editions; 
+    private List<EventEdition> editions; 
     private String popularity;
     private double ocupation;
     //construtor da classe Events com um parâmetro para o nome (string).
@@ -39,27 +39,9 @@ public class Events
         System.out.println("Name: " + name);
         System.out.println("Popularidade: " + popularity);
         System.out.println("Edições: " + editions);
-    }
-    
-    //método calculatePopularity onde usamos a fórmula de cálculo dada no enunciado do projeto
-    public void calculatePopularity(){        
-        /*
-         * if(popularidadeMedia <= 0.25){
-            this.popularity = "Fraca";
-            }
-        
-        if(popularidadeMedia <= 0.5 && popularidadeMedia > 0.25){
-            this.popularity = "Nova";
+        for (EventEdition edition : editions) {
+            System.out.println(" - " + edition);  // Supondo que EventEdition tenha um método toString adequado
         }
-        
-        if(popularidadeMedia <= 0.75 && popularidadeMedia > 0.5){
-            this.popularity = "Grande";
-        }
-        
-        if(popularidadeMedia <= 1 && popularidadeMedia > 0.75){
-            this.popularity = "Topo";
-        }
-         */
     }
     
     //foi criado um método estático double que têm como parâmetros 2 arrays de int que no fimnos retorna um valor em double
@@ -105,7 +87,7 @@ public class Events
         } 
         //se a popularidade for menor ou igual a 100%,e maior que 75 designa-se de topo
         else {
-            return "De topo";
+            return "Topo";
         }
     }
 }

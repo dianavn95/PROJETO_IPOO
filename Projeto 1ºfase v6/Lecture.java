@@ -41,6 +41,12 @@ public class Lecture
         this.totalRegistrations = -1;
     }
     
+    public LocalDateTime getStartTime(){
+        return startTime;
+    }
+    public LocalDateTime getEndTime(){
+        return endTime;
+    }
     
     //método para adicionar uma palestrante, fazendo uso do método add que a classe ArrayList já possui
     public void addLecturer(Lecturer lecturer) {
@@ -98,7 +104,7 @@ public class Lecture
     
     //método boolean para verificar se um palestrante está inscrito, com parâmetro
     //o parâmetro é o palestrante
-    private boolean isLecturerRegistered(String lecturer){
+    private boolean isLecturerRegistered(Lecturer lecturer){
         
         //se a lista de arrays contêm o palestrante, retorna verdade
         if(lecturers.contains(lecturer)){
@@ -137,7 +143,7 @@ public class Lecture
     }
     
     //método boolen para verificar se uma palestra afere as condições necessárias para ser simulada
-    public boolean canBeenSimulated() {
+    public boolean canBeSimulated() {
         
         //se tiver sala e palestrantes, então o método retorna verdade
         if(classroom != null && !lecturers.isEmpty()){

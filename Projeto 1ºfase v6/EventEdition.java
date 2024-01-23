@@ -70,8 +70,8 @@ public class EventEdition
     private boolean intervalTimeIntersects(Lecture lecture1, Lecture lecture2) {
         
         //retorna os valores do tempo de inicio e fim das palestras
-        return (lecture1.getBeginning().before(lecture2.getEnd())|| lecture1.getBeginning().equals(lecture2.getEnd())) &&
-               (lecture1.getEnd().after(lecture2.getBeginning()))|| lecture1.getEnd().equals(lecture2.getBeginning());
+        return (lecture1.getStartTime().isBefore(lecture2.getEndTime())|| lecture1.getStartTime().equals(lecture2.getEndTime())) &&
+               (lecture1.getEndTime().isAfter(lecture2.getStartTime()))|| lecture1.getEndTime().equals(lecture2.getStartTime());
     }
     
     //método do tipo boolean para se saber se a edição já foi simulada
@@ -186,7 +186,9 @@ public class EventEdition
             int totalParticipants = participantes1 + participantes2 + participantes3 + participantes4 + participantes5 + participantes6 + participantes7 + participantes8 + participantes9 + participantes10;
         */
     }
+     
+    }
 
     
-}
+
 //fim da classe EventEdition

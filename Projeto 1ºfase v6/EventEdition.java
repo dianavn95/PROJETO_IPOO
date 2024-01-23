@@ -3,7 +3,7 @@
  * Esta classe gere a informação relacionada ás edições dos eventos e as suas funcionalidades.
  * 
  * @author (Rita e Diana) 
- * @version (v5)
+ * @version (v7)
  */
 //código adicional para se conseguir fazer uso das listas de arrays
 import java.util.ArrayList;

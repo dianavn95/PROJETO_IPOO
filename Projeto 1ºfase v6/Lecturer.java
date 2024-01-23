@@ -2,7 +2,7 @@
  * Esta classe gere a informação relativa aos palestrantes e as suas funcionalidades.
  * 
  * @author (Rita e Diana) 
- * @version (v5)
+ * @version (v7)
  */
 //código adicional para fazer uso das listas de arrays
 import java.util.ArrayList;
@@ -44,6 +44,7 @@ public class Lecturer
         //faz-se uso do método add já incluído na classe ArrayList
         lectures.add(lecture);
     }
+    
     
     //método para cálcular a popularidade do palestrante
     public void calculatePopularity() {

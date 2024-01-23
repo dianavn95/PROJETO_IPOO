@@ -57,6 +57,26 @@ public class Lecture
         lecturers.add(lecturer);
     }
     
+    /*Método para verificar que uma palestra não têm o mesmo palestrante duas vezes
+     * public void assignLecturer(Lecturer lecturer){
+     *   
+     *   //verificar se este palestrante está vazio ou se este palestrante é diferente ao palestrante inserido
+     *   if(this.lecturer == null || !this.lecturer.equal.(lecturer)){
+     *       
+     *       //é adicionado o palestrante
+     *       this.lecturer = lecturer;
+     *       
+     *   }
+     *   else {
+     *       
+     *       //é mostrada uma mensagem
+     *       System.out.println("Este palestrante já está inserido nesta palestra!");
+     *       
+     *   }
+     *   
+     * }
+     */ 
+    
     /*
      * Novos métodos para veríficar conflitos nas palestras
      * 
@@ -66,10 +86,14 @@ public class Lecture
      *      return true 
      *   }
      *   else {
-     *       return false
+     *      return false
      *   }
      *   
      * }
+     * 
+     * private boolean isClassroomValid(){
+     *     
+     }
      */
     
     //método boolean para verificar se um palestrante está inscrito, com parâmetro

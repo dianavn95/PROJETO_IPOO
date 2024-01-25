@@ -9,6 +9,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
+import java.util.Objects;
 //criação da classe Lecture para gerir as palestras
 public class Lecture
 {
@@ -41,12 +42,6 @@ public class Lecture
         this.totalRegistrations = -1;
     }
     
-    public LocalDateTime getStartTime(){
-        return startTime;
-    }
-    public LocalDateTime getEndTime(){
-        return endTime;
-    }
     
     //método para adicionar uma palestrante, fazendo uso do método add que a classe ArrayList já possui
     public void addLecturer(Lecturer lecturer) {
@@ -57,8 +52,10 @@ public class Lecture
          *     lecturers.add(lecturer)
          * }
          * else {
-         *     System.out.println("Insira uma data válida!")
+         *     System.out.println("Insira dados válidos!")
          * }
+         * 
+         * 
          */
         lecturers.add(lecturer);
     }
@@ -81,6 +78,7 @@ public class Lecture
      *   }
      *   
      * }
+     * 
      */ 
     
     /*
@@ -97,14 +95,50 @@ public class Lecture
      *   
      * }
      * 
-     * private boolean isClassroomValid(){
+     * @Override
+     * private boolean equals(Object local){
+     * 
+     *      if(this == classroom) return true;
+     *      if(classroom == null || getClassroom() != classroom.getClassroom()) return false;
+     *      Lecture 
+     * 
+     * }
+     * 
+     * 
+     * Método para garantir que o palestrante não é adicionado a duas palestras cujos horários
+     * se intersectem
+     * Nome "schedule" para representar os horários das palestras
+     * 
+     * 
+     * @Override
+     * public boolean equals(Object schedule){
+     *     if(this == schedule) return true;
+     *     if(schedule == null || getLecture() != schedule.getLecture()) return false;
+     *     Lecture that = (Lecture) schedule;
+     *     return Objects.equals(hours, that.hours)
+     * }
+     * 
+     * @Override
+     * public int hashCode(){
+     *     return Objects.hash(hours)
+     * }
+     * 
+     * Depois dentro de um dos voids, adicionar este pedaço de código que faz a 
+     * comparação dos dados
+     * colocar como parâmetro do método a lista das palestras
+     * 
+     * if(lecture1.equals(lecture2)){
      *     
-     }
+     * }
+     * else{
+     *     System.out.println("Não é possível adicionar o palestrante!");
+     * }
+     * 
      */
     
     //método boolean para verificar se um palestrante está inscrito, com parâmetro
     //o parâmetro é o palestrante
-    private boolean isLecturerRegistered(Lecturer lecturer){
+    private boolean isLecturerRegistered(String lecturer){
         
         //se a lista de arrays contêm o palestrante, retorna verdade
         if(lecturers.contains(lecturer)){
@@ -143,7 +177,7 @@ public class Lecture
     }
     
     //método boolen para verificar se uma palestra afere as condições necessárias para ser simulada
-    public boolean canBeSimulated() {
+    public boolean canBeenSimulated() {
         
         //se tiver sala e palestrantes, então o método retorna verdade
         if(classroom != null && !lecturers.isEmpty()){

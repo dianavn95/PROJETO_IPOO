@@ -8,6 +8,7 @@
 //código adicional para se conseguir fazer uso das listas de arrays
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 //criação da classe EventEdition para gerir a edição de eventos
 public class EventEdition
 {
@@ -36,9 +37,36 @@ public class EventEdition
         this.totalRegistrations = -1;
         
     }
+    
     public void addEdition(EventEdition edition){
         editions.add(edition);
     }
+    
+    /* //Método para garantir que não há edições no mesmo local, ao mesmo tempo
+     * 
+     * //verificar os locais das edições
+     * public boolean editionConflict(EventEdition anotherEdition){
+     *     
+     *     if(this.location.equals(anotherEdition.location)){
+     *         
+     *         //verificar os intervalos de tempo
+     *         if(timeOverlap(this.startTime, this.endTime, anotherEdition.startTime, anotherEdition.endTime)){
+     *             return true;
+     *         }
+     *     }
+     *     else{
+     *          return false;
+     *     }
+     *     
+     * private boolean timeOverlap(parametros do intervalo de tempo){
+     *     return (start1 > end2) && (end1 < start2);
+     * }
+     * 
+     * 
+     * 
+     */
+    
+    
     
     //método registerLecture com um parâmetro do tipo Lecture
     //neste método conseguimos registrar novas palestras
@@ -70,8 +98,8 @@ public class EventEdition
     private boolean intervalTimeIntersects(Lecture lecture1, Lecture lecture2) {
         
         //retorna os valores do tempo de inicio e fim das palestras
-        return (lecture1.getStartTime().isBefore(lecture2.getEndTime())|| lecture1.getStartTime().equals(lecture2.getEndTime())) &&
-               (lecture1.getEndTime().isAfter(lecture2.getStartTime()))|| lecture1.getEndTime().equals(lecture2.getStartTime());
+        return (lecture1.getBeginning().before(lecture2.getEnd())|| lecture1.getBeginning().equals(lecture2.getEnd())) &&
+               (lecture1.getEnd().after(lecture2.getBeginning()))|| lecture1.getEnd().equals(lecture2.getBeginning());
     }
     
     //método do tipo boolean para se saber se a edição já foi simulada
@@ -186,9 +214,7 @@ public class EventEdition
             int totalParticipants = participantes1 + participantes2 + participantes3 + participantes4 + participantes5 + participantes6 + participantes7 + participantes8 + participantes9 + participantes10;
         */
     }
-     
-    }
 
     
-
+}
 //fim da classe EventEdition

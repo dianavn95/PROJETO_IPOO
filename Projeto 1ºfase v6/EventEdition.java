@@ -3,15 +3,17 @@
  * Esta classe gere a informação relacionada ás edições dos eventos e as suas funcionalidades.
  * 
  * @author (Rita e Diana) 
- * @version (v7)
+ * @version (v9)
  */
 //código adicional para se conseguir fazer uso das listas de arrays
 import java.util.ArrayList;
 import java.util.List;
+//código para fazer uso dos métodos equals e hasCode
 import java.util.Objects;
 //criação da classe EventEdition para gerir a edição de eventos
 public class EventEdition
 {
+    
     //atribútos da classe presentes no enunciado do projeto
     private int numberOfEdition;
     private String initialDate;
@@ -47,26 +49,27 @@ public class EventEdition
      * //verificar os locais das edições
      * public boolean editionConflict(EventEdition anotherEdition){
      *     
+     *     //verificação da localização das duas edições
      *     if(this.location.equals(anotherEdition.location)){
      *         
-     *         //verificar os intervalos de tempo
+     *         //verificar os intervalos de tempo e ver se estão sobrepostos
      *         if(timeOverlap(this.startTime, this.endTime, anotherEdition.startTime, anotherEdition.endTime)){
      *             return true;
      *         }
      *     }
+     *     
+     *     //caso as condições não se verifiquem verdadeiras, a função retorna o valor falso
      *     else{
      *          return false;
      *     }
      *     
+     * //método boolean de auxilio aos intervalos de tempo
+     * //para se conseguir verificar se estão sobrepostos
      * private boolean timeOverlap(parametros do intervalo de tempo){
      *     return (start1 > end2) && (end1 < start2);
      * }
-     * 
-     * 
-     * 
      */
-    
-    
+
     
     //método registerLecture com um parâmetro do tipo Lecture
     //neste método conseguimos registrar novas palestras
@@ -214,7 +217,5 @@ public class EventEdition
             int totalParticipants = participantes1 + participantes2 + participantes3 + participantes4 + participantes5 + participantes6 + participantes7 + participantes8 + participantes9 + participantes10;
         */
     }
-
-    
 }
 //fim da classe EventEdition

@@ -2,7 +2,7 @@
  * Esta classe gere a informação relativa aos palestrantes e as suas funcionalidades.
  * 
  * @author (Rita e Diana) 
- * @version (v7)
+ * @version (v9)
  */
 //código adicional para fazer uso das listas de arrays
 import java.util.ArrayList;

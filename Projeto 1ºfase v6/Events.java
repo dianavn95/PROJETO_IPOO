@@ -2,7 +2,7 @@
  * Esta classe gere toda a informação relativamente aos eventos e as funcionalidades do mesmo.
  * 
  * @author (Rita e Diana) 
- * @version (v7)
+ * @version (v9)
  */
 //código adicional de forma a fazer uso das listas de arrays
 import java.util.ArrayList;

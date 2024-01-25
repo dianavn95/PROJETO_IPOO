@@ -3,12 +3,13 @@
  * Esta classe gere a informação relacionada ás palestras e as suas funcionalidades.
  * 
  * @author (Rita e Diana) 
- * @version (v5)
+ * @version (v9)
  */
 //código adicional para uso das listas de arrays e acesso ao LocalDateTime
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
+//código para fazer uso dos métodos equals e hasCode
 import java.util.Objects;
 //criação da classe Lecture para gerir as palestras
 public class Lecture
@@ -46,80 +47,96 @@ public class Lecture
     //método para adicionar uma palestrante, fazendo uso do método add que a classe ArrayList já possui
     public void addLecturer(Lecturer lecturer) {
         
-        //verificar datas antes de adicionar palestra
+        //verificação das datas antes de adicionar palestra
         /*
-         * if(isDateValid() == true && ){
+         * if(isDateValid() == true){
+         *     //se a data inserida for válida então a palestra é adicionada
          *     lecturers.add(lecturer)
          * }
+         * //se a data inserida não for válida então é mostrada uma mensagem de erro
          * else {
-         *     System.out.println("Insira dados válidos!")
+         *     System.out.println("Insira uma data válida!")
          * }
-         * 
-         * 
          */
+        
         lecturers.add(lecturer);
     }
     
-    /*Método para verificar que uma palestra não têm o mesmo palestrante duas vezes
-     * public void assignLecturer(Lecturer lecturer){
+    /* //Método para verificar que uma palestra não têm o mesmo palestrante duas vezes
+     * public void assignLecturer(Lecture lecturer){
      *   
-     *   //verificar se este palestrante está vazio ou se este palestrante é diferente ao palestrante inserido
-     *   if(this.lecturer == null || !this.lecturer.equal.(lecturer)){
+     *   //verificar se este palestrante está vazio ou se o palestrante é diferente ao palestrante inserido
+     *   if(this.lecturer == null || !this.lecturer.equal.(lecturer)){ 
      *       
      *       //é adicionado o palestrante
      *       this.lecturer = lecturer;
      *       
      *   }
-     *   else {
-     *       
-     *       //é mostrada uma mensagem
-     *       System.out.println("Este palestrante já está inserido nesta palestra!");
-     *       
-     *   }
      *   
+     *   //caso não seja verdadeiro, é mostrada uma mensagem a avisar que o palestrante
+     *   já foi inserido na palestra
+     *   else { 
+     *       System.out.println("Este palestrante já está inserido nesta palestra!");     
+     *   } 
      * }
      * 
      */ 
     
-    /*
-     * Novos métodos para veríficar conflitos nas palestras
-     * 
+    /* //Novos métodos para veríficar conflitos nas palestras 
      * private boolean isDateValid(LocalDateTime startDate, LocalDateTime endDate, LocalDateTime editionStart, LocalDateTime editionEnd){
      *   
+     *   //se as datas estiverem sobrepostas retorna verdade
      *   if(startDate >= editionStart && endDate <= editionEnd){
      *      return true 
      *   }
+     *   
+     *   //caso contrário retorna falso (as datas não estão sobrepostas)
      *   else {
      *      return false
      *   }
-     *   
      * }
      * 
+     * //através do uso dos métodos de hashCode criamos métodos de auxilio
      * @Override
      * private boolean equals(Object local){
      * 
+     *      //verificar se numa sala existe mais de uma palestra no mesmo intervalo de tempo
      *      if(this == classroom) return true;
+     *      
+     *      //semelhante ao if comum
+     *      //se a sala estiver vazia ou a sala for diferente da está "registrada"
+     *      //então retorna falso
      *      if(classroom == null || getClassroom() != classroom.getClassroom()) return false;
-     *      Lecture 
-     * 
+     *      
+     *      //Acho que não está completo aqui
+     *      Lecture
      * }
      * 
      * 
-     * Método para garantir que o palestrante não é adicionado a duas palestras cujos horários
-     * se intersectem
-     * Nome "schedule" para representar os horários das palestras
+     * //Método para garantir que o palestrante não é adicionado a duas palestras cujos horários
+     * //se intersectem
+     * //Nome "schedule" para representar os horários das palestras
      * 
      * 
+     * //através do uso dos métodos de hashCode criamos métodos de auxilio outra vez
      * @Override
      * public boolean equals(Object schedule){
+     *     
+     *     //verificar se existem horários sobrepostos
      *     if(this == schedule) return true;
+     *     
+     *     //semelhante ao if comum
+     *     //se não houver horário ou as palestras foram a horas diferentes retorna falso
      *     if(schedule == null || getLecture() != schedule.getLecture()) return false;
      *     Lecture that = (Lecture) schedule;
      *     return Objects.equals(hours, that.hours)
      * }
      * 
+     * 
+     * //através do uso dos métodos de hashCode criamos métodos de auxilio outra vez
      * @Override
      * public int hashCode(){
+     *     //retorna as horas
      *     return Objects.hash(hours)
      * }
      * 
@@ -130,6 +147,7 @@ public class Lecture
      * if(lecture1.equals(lecture2)){
      *     
      * }
+     * //é mostrada uma mensagem de erro
      * else{
      *     System.out.println("Não é possível adicionar o palestrante!");
      * }
